@@ -1,0 +1,23 @@
+.countries{
+    margin-top: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    
+}
+
+.countries a{
+    text-decoration: none;
+}
+
+.cities{
+    padding-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(36, 36, 36);
+}
+
+.country{
+    margin-left: 5px;
+    font-size: 15px;
+    color: rgb(116, 116, 116);
+}

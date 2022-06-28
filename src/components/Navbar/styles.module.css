@@ -1,0 +1,133 @@
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #22485d;
+  color: #ffffff;
+}
+.titulo{
+  font-size: 30px;
+  margin-left: 10px;
+}
+.titulo a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.titulo a:hover{  
+  color: #d4d4d4;
+}
+
+
+.wrapper{
+  display: flex;
+  justify-content: end;  
+  
+}
+
+.img{
+  width: 30px;
+  height: 30px;  
+}
+
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;  
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: 23px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: 60px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #cccccc;
+  color: rgb(39, 39, 39);
+}
+
+.search_box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.input_search{
+  height: 50px;  
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;  
+  padding-right: 40px;  
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(0, 0, 0, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.btn_search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+
+.searchimg{
+  width: 30px;
+  height: 30px;
+}
+
+.offcanvasheader{
+  background-color: #22485d;
+  color: #ffffff;
+}
