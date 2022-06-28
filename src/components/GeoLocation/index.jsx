@@ -1,19 +1,22 @@
 
 import { useEffect, useState } from 'react';
 import Spinner from '../Spinner'
+import ErrorPage from '../Error';
 import getGeoLocation from '../../actions/getGeoLocation';
 import Result from '../Result';
 
 export default function GeoLocation({}){        
 
     const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
         
     useEffect(() => {
         const fetchData = async () => {
-            const {longitude, latitude} = await getGeoLocation()                        
+            const {longitude, latitude, error} = await getGeoLocation()                        
             setLoading(false);             
-            setData(`${latitude},${longitude}`);                
+            setData(`${latitude},${longitude}`);   
+            setError(error);
         }
  
         fetchData()                       
@@ -24,11 +27,14 @@ export default function GeoLocation({}){
             <Spinner />
         )
     }
+    
+    console.log(error)
 
-    if( !navigator.geolocation ){
-        alert(`Your Broswe doesn't have Geolocation option`)
-        throw new Error(`Your Browse doesn't have Geolocation option`)
-    }   
+    if(error){
+        return(
+            <ErrorPage message={`Location Access Denied 😔`}/>
+        )
+    }
 
     return(       
         <Result location={data}/>          

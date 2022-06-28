@@ -1,10 +1,13 @@
 import styles from './styles.module.css'
 
-export default function ErrorPage(){
+export default function ErrorPage({message}){
+
+    console.log(message)
+
     return(        
         <div className={styles.wrapper}>
             <div className={styles.typing_demo}>
-                Ups! Something Went Wrong
+                {message}
             </div>
         </div>
     )

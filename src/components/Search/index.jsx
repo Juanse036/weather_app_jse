@@ -30,7 +30,7 @@ export default function Search(textsearch) {
 
     if(error){
         return(
-            <ErrorPage />
+            <ErrorPage message={'Ups! Something Went Wrong'} />
         )
     }
     

@@ -33,7 +33,7 @@ export default function Result({location}){
 
     if(error){
         return(
-            <ErrorPage />
+            <ErrorPage message={'Ups! Something Went Wrong'} />
         )
     }   
 

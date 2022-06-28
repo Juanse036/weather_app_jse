@@ -9,7 +9,7 @@ export default function PageRoutes() {
 
     return(
         <Routes>
-            <Route path="/" element={<GeoLocation/>} />             
+            <Route path="/" element={<Result location='Bogota'/>} />
             <Route path="/CurrentLocation" element={<GeoLocation/>} />             
             <Route path={loc[1]} element={<Result location={finallocation}/>} />                     
         </Routes>
