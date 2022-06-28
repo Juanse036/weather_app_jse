@@ -122,6 +122,12 @@
 
 @media (max-width: 520px) {
 
+    
+
+    .titles h1{
+        width: min-content;
+    }
+
     .alldata{
         padding: 10px;
     }   
