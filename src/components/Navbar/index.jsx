@@ -21,14 +21,14 @@ export default function Navbar(){
             <ul className={styles.wrapper}>
                 <li className={`${styles.icon} ${styles.facebook}`}>
                 <span className={styles.tooltip}>GeoLocation</span>
-                    <a href={`/CurrentLocation`}>                        
-                        <img src={location} className={styles.img} />
+                    <a href={`/CurrentLocation`} aria-label="CurrentLocation">                        
+                        <img src={location} className={styles.img} alt="CurrentLocation"/>
                     </a>
                 </li>               
                 
                 <li className={`${styles.icon} ${styles.facebook}`} onClick={handleShow}>
                     <span className={styles.tooltip}>Search</span>
-                    <img src={search} className={styles.img} />
+                    <img src={search} className={styles.img} alt="Search"/>
                 </li>                               
             </ul>
             

@@ -6,7 +6,7 @@ export default async function getCountries({textsearch}){
       method: 'GET',
       headers: {
           'X-RapidAPI-Key': API_KEY,
-          'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+          'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com',          
       }
   };
   

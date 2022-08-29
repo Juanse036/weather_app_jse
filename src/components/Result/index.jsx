@@ -42,26 +42,26 @@ export default function Result({location}){
             <div className={styles.results}>   
                 <div className={`${styles.titles} ${styles.item2}`}>
                     <h1>{data.location.name}, {data.location.region}</h1>
-                    <h3>{data.location.country}</h3>
+                    <h2>{data.location.country}</h2>
                     <p className={styles.datalabel}>Time: {data.location.localtime}</p>
                 </div>
                 <div className={`${styles.boxresults} ${styles.item1}`}>                    
-                    <img src={data.current.condition.icon} />                    
+                    <img src={data.current.condition.icon} alt={data.current.condition.text}/>                    
                     <p className={styles.datanumber}>{data.current.temp_c}°C</p>                    
                     <p className={styles.datalabel}>Condition: {data.current.condition.text}</p>                                        
                 </div>
                 <div className={`${styles.boxresults} ${styles.item3}`}>
-                    <img src={humidity}/>
+                    <img src={humidity} alt="Humidity"/>
                     <p className={styles.datanumber}>{data.current.humidity}%</p>                    
                     <p className={styles.datalabel}>Humidity</p>
                 </div>
                 <div className={`${styles.boxresults} ${styles.item4}`}>
-                    <img src={windspeed}/>
+                    <img src={windspeed} alt="WindSpeed"/>
                     <p className={styles.datanumber}>{data.current.wind_kph}Km/h</p>                    
                     <p className={styles.datalabel}>Wind Speed</p>
                 </div>
                 <div className={`${styles.boxresults} ${styles.item5}`}>
-                    <img src={temperature}/>
+                    <img src={temperature} alt="Temperature"/>
                     <p className={styles.datanumber}>{data.forecast.forecastday[0].day.mintemp_c} / {data.forecast.forecastday[0].day.maxtemp_c} °C </p>                        
                     <p className={styles.datalabel}>Min/Max Temperature</p>    
                 </div>
